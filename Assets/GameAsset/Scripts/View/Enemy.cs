@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using GameAsset.Scripts.Core;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    public GameAsset.Scripts.Core.Enemy origin;
     private List<Transform> _wayPoints;
     private int _curWayIndex = 0;
-    //private GameAsset.Scripts.Core.Enemy originEnemy;
-
+    
     public void Move(List<Transform> wayPoints)
     {
         _wayPoints = wayPoints;
@@ -28,9 +28,25 @@ public class Enemy : MonoBehaviour
                 {
                     _curWayIndex = 0;
                 }
-
                 _Move();
             });
     }
+
+    public void Damaged(int damage)
+    {
+        if (origin != null)
+        {
+            origin.HP -= damage;
+            if (origin.HP <= 0)
+                Die();
+        }
+    }
+
+    private void Die()
+    {
+        GameMaster.Instance.EnemyKill();
+        transform.DOKill();
+    }
+
     
 }

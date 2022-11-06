@@ -15,7 +15,8 @@ namespace GameAsset.Scripts.Core
         public MasterTable masterTable;
         public User user;
         public int stageLevel = 0;
-
+        public UIStageInfo stageUI;
+        public int KillCount = 0;
         public void Awake()
         {
             if (_instance == null)
@@ -33,6 +34,18 @@ namespace GameAsset.Scripts.Core
         public void GameStart()
         {
             stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
+        }
+
+        public void EnemyKill()
+        {
+            KillCount++;
+            if (KillCount == 10)
+            {
+                KillCount = 0;
+                user.Gold += 5;
+                stageUI.UpdateGold(user.Gold);
+            }
+            stageUI.UpdateKillCount(KillCount);
         }
     }
 }
