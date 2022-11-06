@@ -1,0 +1,48 @@
+{
+  "MasterEnemies": [
+    {
+      "Id": "SlimeSlime",
+      "Name": "Slime",
+      "Desc": "Slime",
+      "Hp": 5,
+      "MoveSpeed": 5
+    },
+    {
+      "Id": "OrcOrc",
+      "Name": "Orc",
+      "Desc": "Orc",
+      "Hp": 7,
+      "MoveSpeed": 4
+    },
+    {
+      "Id": "SkeletonSkeleton",
+      "Name": "Skeleton",
+      "Desc": "Skeleton",
+      "Hp": 10,
+      "MoveSpeed": 5
+    }
+  ],
+  "MasterStages": [
+    {
+      "Id": "1Slime",
+      "StageNumber": 1,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 60
+    },
+    {
+      "Id": "2Slime",
+      "StageNumber": 2,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 60
+    },
+    {
+      "Id": "3Slime",
+      "StageNumber": 3,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 60
+    }
+  ]
+}
