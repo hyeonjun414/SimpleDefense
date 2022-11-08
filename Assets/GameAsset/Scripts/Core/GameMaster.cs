@@ -36,9 +36,10 @@ namespace GameAsset.Scripts.Core
             stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
         }
 
-        public void EnemyKill()
+        public void EnemyKill(EnemyView enemy)
         {
             KillCount++;
+            stage.EnemyDie(enemy);
             if (KillCount == 10)
             {
                 KillCount = 0;

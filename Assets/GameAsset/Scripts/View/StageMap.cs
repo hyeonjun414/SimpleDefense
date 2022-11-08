@@ -14,7 +14,7 @@ namespace GameAsset.Scripts.View
         public GameObject Door;
         private Stage stage;
 
-        public List<Enemy> createdEnemies = new();
+        public List<EnemyView> createdEnemies = new();
 
         public void StageStart(Stage _stage)
         {
@@ -46,10 +46,10 @@ namespace GameAsset.Scripts.View
         {
             Door.SetActive(true);
             yield return new WaitForSeconds(1f);
-            
+            var enemy = GameMaster.Instance.masterTable.MasterEnemies[0];
             for (var i = 0; i < stage.EnemyCount; i++)
             {
-                createdEnemies.Add(enemySpawner.Spawn());
+                createdEnemies.Add(enemySpawner.Spawn(enemy));
                 stage.RemainEnemyCount = createdEnemies.Count;
                 UpdateStage();
                 yield return new WaitForSeconds(1f);
@@ -61,6 +61,13 @@ namespace GameAsset.Scripts.View
         public void UpdateStage()
         {
             GameMaster.Instance.stageUI.UpdateStageInfo(stage);
+        }
+
+        public void EnemyDie(EnemyView enemy)
+        {
+            createdEnemies.Remove(enemy);
+            stage.RemainEnemyCount = createdEnemies.Count;
+            UpdateStage();
         }
     }
 }

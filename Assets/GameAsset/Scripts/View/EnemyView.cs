@@ -5,7 +5,7 @@ using GameAsset.Scripts.Core;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyView : MonoBehaviour
 {
     public GameAsset.Scripts.Core.Enemy origin;
     private List<Transform> _wayPoints;
@@ -44,8 +44,10 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        GameMaster.Instance.EnemyKill();
+        GameMaster.Instance.EnemyKill(this);
         transform.DOKill();
+        Destroy(gameObject);
+        
     }
 
     

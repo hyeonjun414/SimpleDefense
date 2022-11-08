@@ -30,6 +30,11 @@ namespace GameAsset.Scripts.Core
         public int HP;
         public int Defense;
         public int MoveSpeed;
+
+        public Enemy(MasterEnemy enemy)
+        {
+            
+        }
     }
 
     public class Hero : Unit
