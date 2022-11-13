@@ -2,6 +2,7 @@ using System;
 using GameAsset.Scripts.View;
 using LitJson;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace GameAsset.Scripts.Core
 {
@@ -10,6 +11,7 @@ namespace GameAsset.Scripts.Core
         private static GameMaster _instance;
 
         public static GameMaster Instance => _instance;
+
         public StageMap stage;
 
         public MasterTable masterTable;
@@ -31,6 +33,20 @@ namespace GameAsset.Scripts.Core
             GameStart();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Equals))
+            {
+                Time.timeScale *= 2;
+                print($"Time Scale : {Time.timeScale}");
+            }
+            else if(Input.GetKeyDown(KeyCode.Minus))
+            {
+                Time.timeScale /= 2;
+                print($"Time Scale : {Time.timeScale}");
+            }
+        }
+
         public void GameStart()
         {
             stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
@@ -48,5 +64,24 @@ namespace GameAsset.Scripts.Core
             }
             stageUI.UpdateKillCount(KillCount);
         }
+
+        public void StageEnd()
+        {
+            if (user.Hp > 0)
+            {
+                stageLevel++;
+                stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
+            }
+            else
+            {
+                GameOver();
+            }
+        }
+
+        public void GameOver()
+        {
+            print("GameOver");
+        }
     }
 }
+ 

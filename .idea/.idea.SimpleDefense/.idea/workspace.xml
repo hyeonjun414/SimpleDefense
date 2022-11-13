@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0394d6b5-089e-4406-90af-f45b8c9e532c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleDefense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleDefense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/GameMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/GameMaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemyView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/StageMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/StageMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,19 +25,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\wns83\OneDrive\문서\GitHub\SimpleDefense -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\wns83\OneDrive\문서\GitHub\SimpleDefense" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -59,10 +54,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7684">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7684" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -81,6 +76,7 @@
       <workItem from="1667714932749" duration="9053000" />
       <workItem from="1667744304806" duration="597000" />
       <workItem from="1667916817870" duration="3381000" />
+      <workItem from="1668327422496" duration="4841000" />
     </task>
     <servers />
   </component>
@@ -110,14 +106,7 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs</url>
           <line>69</line>
-          <properties documentPath="C:\Users\wns83\OneDrive\문서\GitHub\SimpleDefense\Assets\GameAsset\Scripts\View\Hero.cs" initialLine="69" containingFunctionPresentation="method 'Attack'">
-            <startOffsets>
-              <option value="1717" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1743" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\wns83\OneDrive\문서\GitHub\SimpleDefense\Assets\GameAsset\Scripts\View\Hero.cs" initialLine="69" containingFunctionPresentation="method 'Attack'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

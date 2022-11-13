@@ -36,6 +36,10 @@ namespace GameAsset.Scripts.View
                 {
                     sec = 0;
                     UpdateStage();
+                    if (stage.Time <= 0)
+                    {
+                        StageEnd();
+                    }
                 }
                 yield return null;
             }
@@ -68,6 +72,11 @@ namespace GameAsset.Scripts.View
             createdEnemies.Remove(enemy);
             stage.RemainEnemyCount = createdEnemies.Count;
             UpdateStage();
+        }
+
+        public void StageEnd()
+        {
+            GameMaster.Instance.StageEnd(); 
         }
     }
 }
