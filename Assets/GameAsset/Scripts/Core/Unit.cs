@@ -33,7 +33,7 @@ namespace GameAsset.Scripts.Core
 
         public Enemy(MasterEnemy enemy)
         {
-            
+            HP = enemy.Hp;
         }
     }
 

@@ -13,6 +13,8 @@ namespace GameAsset.Scripts.View
 
         public float attackInterval;
 
+        public ParticleSystem AttackVfx;
+
         private void Start()
         {
             ActionStart();
@@ -67,6 +69,8 @@ namespace GameAsset.Scripts.View
         public void Attack()
         {
             target.Damaged(1);
+            var vfx = Instantiate(AttackVfx, target.transform.position, Quaternion.identity, null);
+            Destroy(vfx.gameObject, vfx.main.duration);
             if (target.origin.HP <= 0)
             {
                 target = null;

@@ -13,6 +13,7 @@ namespace GameAsset.Scripts.View
         public int xCount;
         public int yCount;
         public float xOffset, yOffset;
+        public float xInterval, yInterval;
         
 
         private void Start()
@@ -22,11 +23,12 @@ namespace GameAsset.Scripts.View
                 for (var j = 0; j < xCount; j++)
                 {
                     var unitBase = Instantiate(basePrefabs, transform, false);
-                    unitBase.transform.position = new Vector2(-(float)xCount / 2 + j + xOffset, -(float)yCount / 2 + i + yOffset);
+                    unitBase.transform.position = new Vector2(
+                        -(float)xCount / 2 + j + xOffset + xInterval * j, 
+                        -(float)yCount / 2 + i + yOffset + yInterval * i);
                     createdUnitBases.Add(unitBase);
                 } 
             }
         }
     }
-
 }

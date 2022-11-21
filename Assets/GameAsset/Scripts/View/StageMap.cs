@@ -43,7 +43,6 @@ namespace GameAsset.Scripts.View
                 }
                 yield return null;
             }
-            
         }
 
         public IEnumerator SpawnRoutine()

@@ -36,6 +36,7 @@ public class EnemyView : MonoBehaviour
     {
         if (origin != null)
         {
+            print($"hit! {origin.HP}");
             origin.HP -= damage;
             if (origin.HP <= 0)
                 Die();
