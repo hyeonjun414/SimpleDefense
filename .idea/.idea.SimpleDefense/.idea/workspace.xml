@@ -2,37 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0394d6b5-089e-4406-90af-f45b8c9e532c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleDefense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleDefense/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Prefabs/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Prefabs/Slime.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/GameMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/GameMaster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/Core/Unit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/StageMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/StageMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UnitGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UnitGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Help_Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Mobile 2D.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Icons/Mobile 2D.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Layout.wlt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIStageInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIStageInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/MasterTable.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/MasterTable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIStageInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,17 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.13f1\Editor\Unity.exe" />
@@ -84,10 +63,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="42624">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="48756">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="42624" />
+      <option name="pid" value="48756" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -110,6 +89,7 @@
       <workItem from="1668381873598" duration="1623000" />
       <workItem from="1668928501180" duration="2028000" />
       <workItem from="1669041355590" duration="908000" />
+      <workItem from="1669212922974" duration="3091000" />
     </task>
     <servers />
   </component>
@@ -138,23 +118,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/Hero.cs</url>
-          <line>73</line>
-          <properties documentPath="C:\Users\wns83\OneDrive\문서\GitHub\SimpleDefense\Assets\GameAsset\Scripts\View\Hero.cs" initialLine="69" containingFunctionPresentation="method 'Attack'" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/EnemySpawner.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\wns83\OneDrive\Documents\GitHub\SimpleDefense\Assets\GameAsset\Scripts\View\EnemySpawner.cs" initialLine="16" containingFunctionPresentation="method 'Spawn'">
+          <url>file://$PROJECT_DIR$/Assets/GameAsset/Scripts/View/StageMap.cs</url>
+          <line>53</line>
+          <properties documentPath="C:\Users\wns83\OneDrive\Documents\GitHub\SimpleDefense\Assets\GameAsset\Scripts\View\StageMap.cs" initialLine="53" containingFunctionPresentation="method 'GameOver'">
             <startOffsets>
-              <option value="459" />
+              <option value="1484" />
             </startOffsets>
             <endOffsets>
-              <option value="497" />
+              <option value="1521" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

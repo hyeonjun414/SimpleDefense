@@ -27,22 +27,71 @@
       "Id": "1Slime",
       "StageNumber": 1,
       "SpawnEnemy": "Slime",
-      "EnemyCount": 30,
-      "Time": 60
+      "EnemyCount": 10,
+      "Time": 40
     },
     {
       "Id": "2Slime",
       "StageNumber": 2,
       "SpawnEnemy": "Slime",
-      "EnemyCount": 30,
-      "Time": 60
+      "EnemyCount": 40,
+      "Time": 40
     },
     {
       "Id": "3Slime",
       "StageNumber": 3,
       "SpawnEnemy": "Slime",
       "EnemyCount": 30,
-      "Time": 60
+      "Time": 40
+    },
+    {
+      "Id": "4Slime",
+      "StageNumber": 4,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "5Slime",
+      "StageNumber": 5,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "6Slime",
+      "StageNumber": 6,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "7Slime",
+      "StageNumber": 7,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "8Slime",
+      "StageNumber": 8,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "9Slime",
+      "StageNumber": 9,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
+    },
+    {
+      "Id": "10Slime",
+      "StageNumber": 10,
+      "SpawnEnemy": "Slime",
+      "EnemyCount": 30,
+      "Time": 40
     }
   ]
 }

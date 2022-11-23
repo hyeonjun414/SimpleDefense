@@ -6,8 +6,6 @@ namespace GameAsset.Scripts.Core
         public string SpawnEnemy;
         public int StageLevel;
         public int EnemyCount;
-        public int RemainEnemyCount;
-        public int KillCount;
         public float Time;
 
         public Stage(MasterStage ms)
@@ -17,7 +15,6 @@ namespace GameAsset.Scripts.Core
             SpawnEnemy = ms.SpawnEnemy;
             EnemyCount = ms.EnemyCount;
             Time = ms.Time;
-            RemainEnemyCount = 0;
         }
     }
     
@@ -33,7 +30,8 @@ namespace GameAsset.Scripts.Core
 
         public Enemy(MasterEnemy enemy)
         {
-            HP = enemy.Hp;
+            //HP = enemy.Hp;
+            HP = 10;
         }
     }
 

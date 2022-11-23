@@ -5,16 +5,15 @@ using UnityEngine;
 
 namespace GameAsset.Scripts.View
 {
-    public class UIStageInfo : MonoBehaviour
+    public class UIManager : MonoBehaviour
     {
         public TextMeshProUGUI textStage, textTime, textEnemy, textKillCount, textGold;
 
+        public GameObject gameOverPanel;
 
         public void UpdateStageInfo(Stage stage)
         {
             textStage.text = $"STAGE {stage.StageLevel}";
-            textTime.text = Math.Ceiling(stage.Time).ToString();
-            textEnemy.text = stage.RemainEnemyCount.ToString();
         }
 
         public void UpdateKillCount(int killcount)
@@ -25,6 +24,21 @@ namespace GameAsset.Scripts.View
         public void UpdateGold(int gold)
         {
             textGold.text = gold.ToString();
+        }
+
+        public void UpdateTime(float time)
+        {
+            textTime.text = Math.Ceiling(time).ToString();
+        }
+
+        public void UpdateRemainEnemy(int remainCount)
+        {
+            textEnemy.text = remainCount.ToString();
+        }
+
+        public void GameOver()
+        {
+            gameOverPanel.SetActive(true);
         }
     }
 }

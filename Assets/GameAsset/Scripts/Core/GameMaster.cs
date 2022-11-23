@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
 using GameAsset.Scripts.View;
 using LitJson;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 
 namespace GameAsset.Scripts.Core
 {
@@ -17,8 +18,10 @@ namespace GameAsset.Scripts.Core
         public MasterTable masterTable;
         public User user;
         public int stageLevel = 0;
-        public UIStageInfo stageUI;
+        public UIManager uiManager;
         public int KillCount = 0;
+        public int remainEnemy = 0;
+        public float time = 0;
         public void Awake()
         {
             if (_instance == null)
@@ -49,7 +52,37 @@ namespace GameAsset.Scripts.Core
 
         public void GameStart()
         {
-            stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
+            
+            StageStart();
+        }
+        
+        public IEnumerator StartTime(float stageTime)
+        {
+            time = stageTime;
+            UpdateTime();
+            float sec = 0;
+            while (true)
+            {
+                sec += Time.deltaTime;
+                time -= Time.deltaTime;
+                if (sec >= 1f)
+                {
+                    sec = 0;
+                    UpdateTime();
+                    if (time <= 0)
+                    {
+                        StageEnd();
+                        yield break;
+                    }
+                }
+
+                yield return null;
+            }
+        }
+
+        private void UpdateTime()
+        {
+            uiManager.UpdateTime(time);
         }
 
         public void EnemyKill(EnemyView enemy)
@@ -60,17 +93,23 @@ namespace GameAsset.Scripts.Core
             {
                 KillCount = 0;
                 user.Gold += 5;
-                stageUI.UpdateGold(user.Gold);
+                uiManager.UpdateGold(user.Gold);
             }
-            stageUI.UpdateKillCount(KillCount);
+            uiManager.UpdateKillCount(KillCount);
         }
 
+        public void StageStart()
+        {
+            var newStage = new Stage(masterTable.MasterStages[stageLevel]);
+            StartCoroutine(StartTime(newStage.Time));
+            stage.StageStart(newStage);
+        }
         public void StageEnd()
         {
-            if (user.Hp > 0)
+            if (remainEnemy < 100)
             {
                 stageLevel++;
-                stage.StageStart(new Stage(masterTable.MasterStages[stageLevel]));
+                StageStart();
             }
             else
             {
@@ -81,6 +120,25 @@ namespace GameAsset.Scripts.Core
         public void GameOver()
         {
             print("GameOver");
+            StopAllCoroutines();
+            stage.GameOver();
+            uiManager.GameOver();
+        }
+
+        public void SpawnedEnemy()
+        {
+            ++remainEnemy;
+            if (remainEnemy >= 100)
+            {
+                GameOver();
+            }
+
+            uiManager.UpdateRemainEnemy(remainEnemy);
+        }
+
+        public void EnemyDead()
+        {
+            uiManager.UpdateRemainEnemy(--remainEnemy);
         }
     }
 }

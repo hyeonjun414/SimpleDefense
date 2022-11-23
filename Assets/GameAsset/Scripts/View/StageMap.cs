@@ -21,28 +21,6 @@ namespace GameAsset.Scripts.View
             stage = _stage;
             UpdateStage();
             StartCoroutine(nameof(SpawnRoutine));
-            StartCoroutine(nameof(StartTime));
-        }
-
-        public IEnumerator StartTime()
-        {
-            UpdateStage();
-            float sec = 0;
-            while (true)
-            {
-                sec += Time.deltaTime;
-                stage.Time -= Time.deltaTime;
-                if (sec >= 1f)
-                {
-                    sec = 0;
-                    UpdateStage();
-                    if (stage.Time <= 0)
-                    {
-                        StageEnd();
-                    }
-                }
-                yield return null;
-            }
         }
 
         public IEnumerator SpawnRoutine()
@@ -53,8 +31,7 @@ namespace GameAsset.Scripts.View
             for (var i = 0; i < stage.EnemyCount; i++)
             {
                 createdEnemies.Add(enemySpawner.Spawn(enemy));
-                stage.RemainEnemyCount = createdEnemies.Count;
-                UpdateStage();
+                GameMaster.Instance.SpawnedEnemy();
                 yield return new WaitForSeconds(1f);
             }
             Door.SetActive(false);
@@ -63,19 +40,23 @@ namespace GameAsset.Scripts.View
 
         public void UpdateStage()
         {
-            GameMaster.Instance.stageUI.UpdateStageInfo(stage);
+            GameMaster.Instance.uiManager.UpdateStageInfo(stage);
         }
 
         public void EnemyDie(EnemyView enemy)
         {
             createdEnemies.Remove(enemy);
-            stage.RemainEnemyCount = createdEnemies.Count;
-            UpdateStage();
+            GameMaster.Instance.EnemyDead();
         }
 
-        public void StageEnd()
+        public void GameOver()
         {
-            GameMaster.Instance.StageEnd(); 
+           StopAllCoroutines();
+           foreach (var enemy in createdEnemies)
+           {
+               Destroy(enemy.gameObject);
+           }
+           createdEnemies.Clear();
         }
     }
 }
